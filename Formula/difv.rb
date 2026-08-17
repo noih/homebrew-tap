@@ -1,11 +1,20 @@
+# Filled in by .github/workflows/release.yml and attached to each release as
+# difv.rb. Copy it into the tap repository (noih/homebrew-tap) as
+# Formula/difv.rb — see the Install section of the README.
+#
+# Shaped to pass both of the tap's checks. `brew readall --os=all --arch=all`
+# loads the formula on every platform, so every platform must see a URL: the
+# macOS build is the top-level default and Linux overrides it. `brew audit
+# --strict` wants no `version` (read from the URL) and `depends_on` before the
+# platform blocks.
 class Difv < Formula
   desc "Review and tweak your Git changes side by side, in the terminal"
   homepage "https://github.com/noih/difv"
   # The macOS build is the default; Linux overrides it below. An Intel Mac never
   # fetches it — `depends_on arch: :arm64` refuses first — but every platform
   # has to declare some URL for the formula to load at all.
-  url "https://github.com/noih/difv/releases/download/v1.0.0/difv-v1.0.0-aarch64-apple-darwin.tar.gz"
-  sha256 "a928aaaf382d579d0589e829b444b48463cace262f2c11ff4e502003ae46a422"
+  url "https://github.com/noih/difv/releases/download/v1.0.1/difv-v1.0.1-aarch64-apple-darwin.tar.gz"
+  sha256 "ae69fa004c15be43ace6d975c201076e86fcb9fc2ca9a26f260db5f9c3c12536"
   license "MIT"
 
   # difv shells out to git rather than linking a git library.
@@ -18,12 +27,12 @@ class Difv < Formula
 
   on_linux do
     on_arm do
-      url "https://github.com/noih/difv/releases/download/v1.0.0/difv-v1.0.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "3d02247703107edf00ce90faea0982409e5a30cadf627ca0017008762dbdf37f"
+      url "https://github.com/noih/difv/releases/download/v1.0.1/difv-v1.0.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "84288825b3b7426e3c56c069a8e05e1c328bfa133b4bb12220ec1a71a736fc4d"
     end
     on_intel do
-      url "https://github.com/noih/difv/releases/download/v1.0.0/difv-v1.0.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "139ed60b8081405044ce9018cc9e2c886fd9eafaf7d0a92e098436d08583da2a"
+      url "https://github.com/noih/difv/releases/download/v1.0.1/difv-v1.0.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "0b358df351584001780ba56e731978fdd9fe30b276d1e92321e294ff6a16a202"
     end
   end
 
