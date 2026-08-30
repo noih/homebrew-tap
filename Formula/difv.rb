@@ -13,8 +13,8 @@ class Difv < Formula
   # The macOS build is the default; Linux overrides it below. An Intel Mac never
   # fetches it — `depends_on arch: :arm64` refuses first — but every platform
   # has to declare some URL for the formula to load at all.
-  url "https://github.com/noih/difv/releases/download/v1.0.3/difv-v1.0.3-aarch64-apple-darwin.tar.gz"
-  sha256 "e63a18b70548acab8462d7459422bc3a184d0ec96c981c7c9d12b82a950588ae"
+  url "https://github.com/noih/difv/releases/download/v1.0.4/difv-v1.0.4-aarch64-apple-darwin.tar.gz"
+  sha256 "c38f6bb92c58d29cd14a88378d6d87a9bc482947f2670e1ab8885d24fd2e87f9"
   license "MIT"
 
   # difv shells out to git rather than linking a git library.
@@ -27,12 +27,12 @@ class Difv < Formula
 
   on_linux do
     on_arm do
-      url "https://github.com/noih/difv/releases/download/v1.0.3/difv-v1.0.3-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "248001b03c28335b7318efa2ff8db26bf41193fb4055a20306131633ca62cd32"
+      url "https://github.com/noih/difv/releases/download/v1.0.4/difv-v1.0.4-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "bcb616e61206ae2f63e8fdf9a83bca2073f3a3ab95addba55adfe866a56b7d80"
     end
     on_intel do
-      url "https://github.com/noih/difv/releases/download/v1.0.3/difv-v1.0.3-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "59f19b16738699167613ab63f1b81a6c9c39a32f07aaf8274e351b904896ec11"
+      url "https://github.com/noih/difv/releases/download/v1.0.4/difv-v1.0.4-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "09d911c9fccde6c94e3236cb5d760694802ff4136ad843ebd956a7eddb906ccc"
     end
   end
 
