@@ -1,8 +1,8 @@
 class Reswho < Formula
   desc "Read-only resource attribution for macOS"
   homepage "https://github.com/noih/reswho"
-  url "https://github.com/noih/reswho/releases/download/v1.1.1/reswho-v1.1.1-aarch64-apple-darwin.tar.gz"
-  sha256 "f1588f27be7f586b6b97821ca2322ad6507a3afab7b3969e3bd0ac7ceb6dd941"
+  url "https://github.com/noih/reswho/releases/download/v1.1.2/reswho-v1.1.2-aarch64-apple-darwin.tar.gz"
+  sha256 "3a9da3067bc2027b177fe1e3e34834a1bd41c87e4a9ab41b3b98ee33ccb05c54"
   license "MIT"
 
   depends_on arch: :arm64
